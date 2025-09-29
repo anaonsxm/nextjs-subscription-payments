@@ -22,9 +22,13 @@
 - Updated README.md to reflect current setup and user's repo
 - Removed sunset warning and outdated instructions
 - Added quick start guide and simplified development section
+- Fixed Next.js 15 compatibility issues:
+  - Made createClient async and awaited cookies()
+  - Updated all server-side usages to await createClient()
+- Dev server now runs without errors
 
 ## Next Steps
-- Fix any remaining peer dependency issues
 - Test the app functionality
 - Set up local Supabase if needed
 - Test webhook functionality
+- Deploy to production
