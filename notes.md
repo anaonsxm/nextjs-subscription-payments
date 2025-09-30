@@ -25,10 +25,29 @@
 - Fixed Next.js 15 compatibility issues:
   - Made createClient async and awaited cookies()
   - Updated all server-side usages to await createClient()
+- Updated tsconfig.json target from es5 to es2017 to fix deprecated warning
 - Dev server now runs without errors
 
+## Supabase Local Setup
+- Updated all Supabase and related dependencies to latest versions
+- Fixed Supabase CLI installation by running postinstall script manually
+- Started Supabase locally with `npx supabase start`
+- Applied migrations automatically during startup
+- Updated .env.local to use local Supabase instance
+- Fixed PostCSS configuration for Tailwind CSS compatibility
+- Downgraded Tailwind CSS to v3.4.17 for compatibility with existing codebase
+
+## Current Status
+- ✅ Supabase local instance running on `http://127.0.0.1:54321`
+- ✅ Database tables created (products, prices, etc.)
+- ✅ Test products manually inserted into local database
+- ✅ Stripe webhook listener running
+- ✅ Stripe fixtures created test products in Stripe dashboard
+- ❌ Webhook forwarding from Stripe CLI to localhost not working
+- ❌ Dev server having connectivity issues (may need restart)
+
 ## Next Steps
-- Test the app functionality
-- Set up local Supabase if needed
-- Test webhook functionality
-- Deploy to production
+- Debug webhook forwarding from Stripe CLI to localhost
+- Test manual product insertion to verify app functionality
+- Fix webhook sync issue
+- Test full payment flow once products are visible

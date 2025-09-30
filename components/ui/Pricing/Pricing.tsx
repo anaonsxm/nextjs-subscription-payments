@@ -7,7 +7,7 @@ import { getStripe } from '@/utils/stripe/client';
 import { checkoutWithStripe } from '@/utils/stripe/server';
 import { getErrorRedirect } from '@/utils/helpers';
 import { User } from '@supabase/supabase-js';
-import cn from 'classnames';
+import { cn } from '@/utils/cn';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState } from 'react';
 
